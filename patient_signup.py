@@ -9,14 +9,12 @@ from colors import Colors
 
 kv = Builder.load_file('patient_signup.kv')
 class PatientSignup(Screen):
-    pass
+    def __init__(self, **kwargs):
+        super(PatientSignup, self).__init__(**kwargs)
+        Window.clearcolor = rgba(*Colors.BEIGE, 1)
 
-    
-    # def __init__(self, **kwargs):
-    #     super(PatientSignup, self).__init__(**kwargs)
-    #     Window.clearcolor = rgba(*Colors.BEIGE, 1)
-
-    # def get_info(self, patpass, patemail):
-    #     print(patemail.text)
-    #     print(patpass.text)
+    def get_info(self, patemail, patpass, patpassconfirm, patDriverId):
+        info=[patemail, patpass, patpassconfirm, patDriverId]
+        for i in info:
+            print(i.text)
         
