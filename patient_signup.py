@@ -19,8 +19,10 @@ class PatientSignup(Screen):
     def on_pre_leave(self, *args):
         self.manager.transition.direction = 'down'
 
-    def get_info(self, patemail, patpass, patpassconfirm, patDriverId):
-        info=[patemail, patpass, patpassconfirm, patDriverId]
-        for i in info:
-            print(i.text)
+    def valid_credentials(self, patemail, patpass, patpassconfirm, patDriverId):
+        if patpass.text!=patpassconfirm.text:
+            return False
+        if "" in [patemail.text, patpass.text, patpassconfirm.text, patDriverId.text]:
+            return False
         
+        return True        

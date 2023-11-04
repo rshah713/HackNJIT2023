@@ -132,11 +132,10 @@
         
         FloatLayout:
             Button:
-                on_press: root.get_info(patemail, patpass, patpassconfirm, patDriverId)
                 size_hint: (.4, .4)
                 pos_hint: {'center_x': 0.5, 'top': 1}
-#                 on_release:
-#                     root.manager.current = 'login' if root.valid_credentials(email_textinput, pw_textinput, pw_confirm_textinput) else 'signup'
+                on_press: 
+                    root.manager.current = 'patient login' if root.valid_credentials(patemail, patpass, patpassconfirm, patDriverId) else 'patient signup'
 
 
                 color: rgba(Colors.BLUE)
