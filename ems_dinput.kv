@@ -1,0 +1,44 @@
+<EMSDinput>:
+    name: 'ems dinput'
+        
+    ############################## EMS INPUT LABEL ##############################
+    GridLayout:
+        cols: 1
+        
+        pos_hint: {"top": 1}
+        padding: 0, 50, 0, 25
+        
+        Label:
+            text: "Access Info"
+            font_size: 100
+            font_name: 'Roboto-Bold'
+            color: rgba(Colors.BLUE)
+                
+        Widget:
+        Widget:
+                
+        Label:
+            text: "Enter Patient Drivers License #"
+            font_size: 45
+            font_name: 'Roboto-Bold'
+            color: rgba(Colors.ACCENT_BLUE)
+                
+        TextInput:
+            id: license
+            size_hint: (.7, .5)
+                
+        Button:
+            text: "Check"
+            color: rgba(Colors.BLUE)
+            background_normal: '' #https://stackoverflow.com/a/49100826/12514570
+            text: 'Login'
+            font_size: 45
+            on_press: root.manager.current = 'ems dinput' if root.check_dl_num(license.text) else 'ems dinput'
+
+            background_color: rgba(Colors.LIGHT_BLUE)
+                
+        Widget:
+            
+            
+            
+            
