@@ -4,6 +4,7 @@ from kivy.uix.screenmanager import Screen
 from kivy.core.window import Window
 from kivy.utils import rgba
 
+from FirebaseRealtimeDB import login as fb_login
 from colors import Colors
 
 
@@ -15,4 +16,4 @@ class EMSLogin(Screen):
     
     def login(self, email, password):
         print(email, password)
-        return True
+        return fb_login(email, password)
