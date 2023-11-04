@@ -2,28 +2,27 @@
 #: import Colors colors.Colors
 <PatientSignup>:
     name: 'patient signup'
-
-    ############################## LOGIN LABEL ##############################
+        
+    ############################## SIGNUP LABEL ##############################
     GridLayout:
         cols: 1
         
         pos_hint: {"top": 1}
-        size_hint_y: 0.3
-        padding: 0, 50, 0, 25
+        size_hint_y: 0.2
+        padding: 0, 25, 0, 0
         
         Label:
-            text: "New Patient Login"
+            text: "Patient Sign Up"
             font_size: 100
             font_name: 'Roboto-Bold'
             color: rgba(Colors.BLUE)
                 
     BoxLayout:
         orientation: 'vertical'
-        pos_hint: {'top': .7}
-        size_hint_y: .7
-
-
-   ############################## EMAIL ##############################
+            
+        pos_hint: {"top": .8}
+        size_hint_y: .3
+        ############################## EMAIL ##############################
         Label:
             text: "Email:"
             color: rgba(Colors.BLUE)
@@ -31,114 +30,144 @@
             size_hint: (.1, .05)
             pos_hint: {'x': 0.15}
         TextInput:
-            id: patemail
-            size_hint: (.7, .1)
+            id: email
+            size_hint: (.7, .05)
             pos_hint: {'x': 0.15}
             multiline: False
             text: ""
             background_color: rgba(*Colors.BLUE, 0)
             foreground_color: rgba(Colors.ACCENT_BLUE)
-
+                
             canvas.after:
                 Color:
                     rgb: rgba(Colors.BLUE)
                 Line:
                     width: 2
                     rectangle: self.x, self.y, self.width, self.height
-
-
-        Widget:
-            size_hint_y: 0.1
-
+                        
+        
+                
         ############################## PASSWORD ##############################
-
+                
         Label:
             text: "Password:"
-            color: rgba(Colors.BLUE)
+            color: rgba(Colors.ACCENT_BLUE)
             font_size: 20
             size_hint: (.1, .05)
             pos_hint: {'x': 0.15}
         TextInput:
-            id: patpass
-            size_hint: (.7, .1)
+            id: pw_textinput
+            size_hint: (.7, .05)
             pos_hint: {'x': 0.15}
             password: True
             multiline: False
             text: ""
             background_color: rgba(*Colors.BLUE, 0)
             foreground_color: rgba(Colors.ACCENT_BLUE)
-
+                
             canvas.after:
                 Color:
                     rgb: rgba(Colors.BLUE)
                 Line:
                     width: 2
                     rectangle: self.x, self.y, self.width, self.height
-
-        ############################## NEW ACCOUNT BUTTON ##############################        
-        Button:
-            size_hint: (.3, .1)
-            pos_hint: {'x': 0.55}
-
-            text: "New Account"
+                        
+       
+        ############################## CONFIRM PASSWORD ##############################
+                
+        Label:
+            text: "Confirm Password:"
             color: rgba(Colors.BLUE)
-            background_normal: ''
+            font_size: 20
+            size_hint: (.1, .05)
+            pos_hint: {'x': 0.2}
+        TextInput:
+            id: pw_confirm_textinput
+            size_hint: (.7, .05)
+            pos_hint: {'x': 0.15}
+            password: True
+            multiline: False
+            text: ""
             background_color: rgba(*Colors.BLUE, 0)
-#                 on_press: root.manager.current = 'signup'
-
-        Widget:
-            size_hint_y: 0.1
-
-        ############################## DONE BUTTON ##############################    
-        Button:
-            on_press: 
-                root.get_info(patpass, patemail)
-            size_hint: (.3, .2)
-            pos_hint: {'center_x': 0.5}
-#                 on_release:
-#                     root.manager.current = 'dashboard' if root.login(email_textinput, pw_textinput) else 'login'
-
-
-            color: rgba(Colors.BLUE)
-            background_normal: '' #https://stackoverflow.com/a/49100826/12514570
-            text: 'Login'
-            font_size: 45
-
-            background_color: rgba(Colors.ACCENT_BLUE)
-#                 background_down: 'assets/orange_button_down.png'
-
-
-            canvas.before:
+            foreground_color: rgba(Colors.ACCENT_BLUE)
+                
+            canvas.after:
                 Color:
                     rgb: rgba(Colors.BLUE)
                 Line:
-                    width: 3
+                    width: 2
                     rectangle: self.x, self.y, self.width, self.height
                         
-                        
-        ############################## ERROR LABEL ##############################
-        Label:
-            id: errorlbl
-            text: ""
-            color: rgba(255, 0, 0)
-            font_size: 18
-            size_hint_y: .2
-            pos_hint: {'center_y': 0.3}
+        ############################## EMS ID ##############################
                 
-        ############################## LOGO HERE ##############################        
-        Button:
-            size_hint_y: .2
-            background_normal: ''
-            background_color: rgba(237, 151, 76, 0)
-            background_down:''
-            
-      
         Label:
-            size_hint_y: .2
-            text: "[ref=forgot]Forgot Password?[/ref]"
+            text: "Driver License ID:"
             color: rgba(Colors.BLUE)
-            pos_hint: {'center_x': 0.5, "y": 1}
-            markup: True
-            on_ref_press:
-                import webbrowser
-                webbrowser.open("https://forms.gle/hqFUxiabb4gcEFU37")
+            font_size: 20
+            size_hint: (.1, .05)
+            pos_hint: {'x': 0.2}
+        TextInput:
+            id: ems_id
+            size_hint: (.7, .05)
+            pos_hint: {'x': 0.15}
+            password: True
+            multiline: False
+            text: ""
+            background_color: rgba(*Colors.BLUE, 0)
+            foreground_color: rgba(Colors.ACCENT_BLUE)
+                
+            canvas.after:
+                Color:
+                    rgb: rgba(Colors.BLUE)
+                Line:
+                    width: 2
+                    rectangle: self.x, self.y, self.width, self.height
+                        
+
+        ############################## SIGNUP BUTTON ##############################    
+        
+    GridLayout:
+        cols: 1
+        size_hint_y: 0.4 # signup label (.2 size_hint_y) + boxlayout (.3 size_hint_y) + RESERVED GAP (.1 size_hint_y)
+        
+        FloatLayout:
+            Button:
+                size_hint: (.4, .4)
+                pos_hint: {'center_x': 0.5, 'top': 1}
+#                 on_release:
+#                     root.manager.current = 'login' if root.valid_credentials(email_textinput, pw_textinput, pw_confirm_textinput) else 'signup'
+
+
+                color: rgba(Colors.BLUE)
+                background_normal: '' #https://stackoverflow.com/a/49100826/12514570
+                text: 'Signup'
+                font_size: 45
+
+                background_color: rgba(Colors.LIGHT_BLUE)
+#                 background_down: 'assets/orange_button_down.png'
+
+                canvas.before:
+                    Color:
+                        rgb: rgba(Colors.BLUE)
+                    Line:
+                        width: 3
+                        rectangle: self.x, self.y, self.width, self.height
+                            
+        ############################## Error Button ##############################
+            Label:
+                id: errorlbl
+                text: ''
+                color: rgba(255, 0, 0)
+                font_size: 15
+                pos_hint: {'center_y': 0.3}
+
+                            
+        ############################## ALREADY HAVE ACCOUNT ##############################
+                        
+        Button:
+            text: 'Already have an account? Login'
+            color: rgba(Colors.BLUE)
+            background_normal: ''
+            background_color: rgba(*Colors.BLUE, 0)
+            on_press: root.manager.current = 'patient login'
+
