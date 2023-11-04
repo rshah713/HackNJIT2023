@@ -12,3 +12,8 @@ class PatientLogin(Screen):
     def __init__(self, **kwargs):
         super(PatientLogin, self).__init__(**kwargs)
         Window.clearcolor = rgba(*Colors.BEIGE, 1)
+
+    def get_info(self, patpass, patemail):
+        print(patemail.text)
+        print(patpass.text)
+        

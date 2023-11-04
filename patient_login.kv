@@ -31,6 +31,7 @@
             size_hint: (.1, .05)
             pos_hint: {'x': 0.15}
         TextInput:
+            id: patemail
             size_hint: (.7, .1)
             pos_hint: {'x': 0.15}
             multiline: False
@@ -58,6 +59,7 @@
             size_hint: (.1, .05)
             pos_hint: {'x': 0.15}
         TextInput:
+            id: patpass
             size_hint: (.7, .1)
             pos_hint: {'x': 0.15}
             password: True
@@ -89,6 +91,8 @@
 
         ############################## DONE BUTTON ##############################    
         Button:
+            on_press: 
+                root.get_info(patpass, patemail)
             size_hint: (.3, .2)
             pos_hint: {'center_x': 0.5}
 #                 on_release:
