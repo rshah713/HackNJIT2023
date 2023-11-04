@@ -12,3 +12,7 @@ class EMSLogin(Screen):
     def __init__(self, **kwargs):
         super(EMSLogin, self).__init__(**kwargs)
         Window.clearcolor = rgba(*Colors.BEIGE, 1)
+    
+    def login(self, email, password):
+        print(email, password)
+        return True

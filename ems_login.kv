@@ -31,12 +31,13 @@
             size_hint: (.1, .05)
             pos_hint: {'x': 0.15}
         TextInput:
+            id: email
             size_hint: (.7, .1)
             pos_hint: {'x': 0.15}
             multiline: False
             text: ""
             background_color: rgba(*Colors.BLUE, 0)
-            foreground_color: rgba(Colors.BEIGE)
+            foreground_color: rgba(Colors.ACCENT_BLUE)
 
             canvas.after:
                 Color:
@@ -58,13 +59,14 @@
             size_hint: (.1, .05)
             pos_hint: {'x': 0.15}
         TextInput:
+            id: passw
             size_hint: (.7, .1)
             pos_hint: {'x': 0.15}
             password: True
             multiline: False
             text: ""
             background_color: rgba(*Colors.BLUE, 0)
-            foreground_color: rgba(Colors.BEIGE)
+            foreground_color: rgba(Colors.ACCENT_BLUE)
 
             canvas.after:
                 Color:
@@ -91,8 +93,8 @@
         Button:
             size_hint: (.3, .2)
             pos_hint: {'center_x': 0.5}
-#                 on_release:
-#                     root.manager.current = 'dashboard' if root.login(email_textinput, pw_textinput) else 'login'
+            on_release:
+                root.manager.current = 'welcome' if root.login(email.text, passw.text) else 'ems login'
 
 
             color: rgba(Colors.BLUE)
@@ -100,7 +102,7 @@
             text: 'Login'
             font_size: 45
 
-            background_color: rgba(Colors.ACCENT_BLUE)
+            background_color: rgba(Colors.LIGHT_BLUE)
 #                 background_down: 'assets/orange_button_down.png'
 
 
