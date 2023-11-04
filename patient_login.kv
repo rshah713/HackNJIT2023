@@ -2,7 +2,7 @@
 #: import Colors colors.Colors
 <PatientLogin>:
     name: 'patient login'
-        
+
     ############################## LOGIN LABEL ##############################
     GridLayout:
         cols: 1
@@ -17,35 +17,124 @@
             font_name: 'Roboto-Bold'
             color: rgba(Colors.BLUE)
                 
-        BoxLayout:
-            orientation: 'vertical'
-            pos_hint: {'top': 7}
-            size_hint_y: .7
+    BoxLayout:
+        orientation: 'vertical'
+        pos_hint: {'top': .7}
+        size_hint_y: .7
+
+
+   ############################## EMAIL ##############################
+        Label:
+            text: "Email:"
+            color: rgba(Colors.BLUE)
+            font_size: 20
+            size_hint: (.1, .05)
+            pos_hint: {'x': 0.15}
+        TextInput:
+            size_hint: (.7, .1)
+            pos_hint: {'x': 0.15}
+            multiline: False
+            text: ""
+            background_color: rgba(*Colors.BLUE, 0)
+            foreground_color: rgba(Colors.BEIGE)
+
+            canvas.after:
+                Color:
+                    rgb: rgba(Colors.BLUE)
+                Line:
+                    width: 2
+                    rectangle: self.x, self.y, self.width, self.height
+
+
+        Widget:
+            size_hint_y: 0.1
+
+        ############################## PASSWORD ##############################
+
+        Label:
+            text: "Password:"
+            color: rgba(Colors.BLUE)
+            font_size: 20
+            size_hint: (.1, .05)
+            pos_hint: {'x': 0.15}
+        TextInput:
+            size_hint: (.7, .1)
+            pos_hint: {'x': 0.15}
+            password: True
+            multiline: False
+            text: ""
+            background_color: rgba(*Colors.BLUE, 0)
+            foreground_color: rgba(Colors.BEIGE)
+
+            canvas.after:
+                Color:
+                    rgb: rgba(Colors.BLUE)
+                Line:
+                    width: 2
+                    rectangle: self.x, self.y, self.width, self.height
+
+        ############################## NEW ACCOUNT BUTTON ##############################        
+        Button:
+            size_hint: (.3, .1)
+            pos_hint: {'x': 0.55}
+
+            text: "New Account"
+            color: rgba(Colors.BLUE)
+            background_normal: ''
+            background_color: rgba(*Colors.BLUE, 0)
+#                 on_press: root.manager.current = 'signup'
+
+        Widget:
+            size_hint_y: 0.1
+
+        ############################## DONE BUTTON ##############################    
+        Button:
+            size_hint: (.3, .2)
+            pos_hint: {'center_x': 0.5}
+#                 on_release:
+#                     root.manager.current = 'dashboard' if root.login(email_textinput, pw_textinput) else 'login'
+
+
+            color: rgba(Colors.BLUE)
+            background_normal: '' #https://stackoverflow.com/a/49100826/12514570
+            text: 'Login'
+            font_size: 45
+
+            background_color: rgba(Colors.ACCENT_BLUE)
+#                 background_down: 'assets/orange_button_down.png'
+
+
+            canvas.before:
+                Color:
+                    rgb: rgba(Colors.BLUE)
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+                        
+                        
+        ############################## ERROR LABEL ##############################
+        Label:
+            id: errorlbl
+            text: ""
+            color: rgba(255, 0, 0)
+            font_size: 18
+            size_hint_y: .2
+            pos_hint: {'center_y': 0.3}
                 
-                
-       ############################## EMAIL ##############################
-            Label:
-                text: "Email:"
-                color: rgba(135, 196, 255)
-                font_size: 20
-                size_hint: (.1, .05)
-                pos_hint: {'x': 0.15}
-            TextInput:
-                id: patient_email
-                size_hint: (.7, .1)
-                pos_hint: {'x': 0.15}
-                multiline: False
-                text: ""
-                background_color: rgba(135, 196, 255, 0)
-                foreground_color: 1,.5,.5
-
-                canvas.after:
-                    Color:
-                        rgb: 0,1,1
-                    Line:
-                        width: 2
-                        rectangle: self.x, self.y, self.width, self.height
-
-
-            Widget:
-                size_hint_y: 0.1
+        ############################## LOGO HERE ##############################        
+        Button:
+            size_hint_y: .2
+            background_normal: ''
+            background_color: rgba(237, 151, 76, 0)
+            background_down:''
+            
+      
+        Label:
+            size_hint_y: .2
+            text: "[ref=forgot]Forgot Password?[/ref]"
+            color: rgba(Colors.BLUE)
+            pos_hint: {'center_x': 0.5, "y": 1}
+            markup: True
+            on_ref_press:
+                import webbrowser
+                webbrowser.open("https://forms.gle/hqFUxiabb4gcEFU37")

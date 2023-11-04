@@ -2,8 +2,10 @@
 #: import Colors colors.Colors
 <Welcome>:
     name: 'welcome'
+    canvas.before:
+        Color:
+            rgba: 0, 1, 0, 0.5
     GridLayout:
-        background_color: rgba(Colors.BEIGE)
         cols: 1
 
         FloatLayout:
