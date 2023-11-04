@@ -17,4 +17,3 @@ class MedifyApp(App):
 
 if __name__ == '__main__':
     MedifyApp().run()
-
