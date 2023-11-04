@@ -24,5 +24,7 @@ class PatientSignup(Screen):
             return False
         if "" in [patemail.text, patpass.text, patpassconfirm.text, patDriverId.text]:
             return False
+        if "@" not in patemail:
+            return False
         
         return True        
