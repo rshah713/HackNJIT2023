@@ -1,7 +1,7 @@
+#: import rgba kivy.utils.rgba
+#: import Colors colors.Colors
 <EMSLogin>:
     name: 'ems login'
-
-
         
     ############################## LOGIN LABEL ##############################
     GridLayout:
@@ -15,4 +15,37 @@
             text: "Login"
             font_size: 100
             font_name: 'Roboto-Bold'
-            color: (1, 0, 0)
+            color: rgba(Colors.BLUE)
+                
+        BoxLayout:
+            orientation: 'vertical'
+            pos_hint: {'top': 7}
+            size_hint_y: .7
+                
+                
+       ############################## EMAIL ##############################
+            Label:
+                text: "Email:"
+                color: rgba(135, 196, 255)
+                font_size: 20
+                size_hint: (.1, .05)
+                pos_hint: {'x': 0.15}
+            TextInput:
+                id: email_textinput
+                size_hint: (.7, .1)
+                pos_hint: {'x': 0.15}
+                multiline: False
+                text: ""
+                background_color: rgba(135, 196, 255, 0)
+                foreground_color: 1,.5,.5
+
+                canvas.after:
+                    Color:
+                        rgb: 0,1,1
+                    Line:
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
+
+
+            Widget:
+                size_hint_y: 0.1
