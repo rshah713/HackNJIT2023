@@ -4,6 +4,7 @@ from kivy.uix.screenmanager import ScreenManager
 
 from welcome_window import Welcome
 from ems_login import EMSLogin
+from patient_login import PatientLogin
 class WindowManager(ScreenManager):
     pass
 

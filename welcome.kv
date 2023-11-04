@@ -2,15 +2,30 @@
     name: 'welcome'
     GridLayout:
         
-        cols: 2
+        cols: 1
 
-        Button:
-            text: 'I Am A Patient'
-            font_size: 45
-            on_press:
-                # root.manager.current = 'another screen'
-        Button: 
-            text: 'I Am EMS'
-            font_size: 45
-            on_press:
-                root.manager.current = 'ems login'
+        FloatLayout:
+            Label: 
+                text: 'Image goes here'
+                font_size: 200
+                color: 0.12156862745098039, 0.9176470588235294, 0, 1
+                pos_hint: {'center_x': 0.5, 'top': 0.8}
+
+        GridLayout:
+            cols: 2
+            FloatLayout:
+                Button:
+                    text: 'I Am A Patient'
+                    font_size: 45
+                    pos_hint: {'center_x': 0.5, "top":0.6}
+                    size_hint: (.6, .4) # button_width, button_height
+                    on_press:
+                        root.manager.current = 'patient login'
+            FloatLayout:
+                Button: 
+                    text: 'I Am EMS'
+                    font_size: 45
+                    pos_hint: {'center_x': 0.5, "top":0.6}
+                    size_hint: (.6, .4) # button_width, button_height
+                    on_press:
+                        root.manager.current = 'ems login'
