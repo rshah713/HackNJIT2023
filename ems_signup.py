@@ -5,6 +5,7 @@ from kivy.core.window import Window
 from kivy.utils import rgba
 
 from colors import Colors
+from FirebaseRealtimeDB import create_acct
 
 
 kv = Builder.load_file('ems_signup.kv')
@@ -18,5 +19,11 @@ class EMSSignup(Screen):
     def valid_credentials(self, email, pw, pw_confirm, ems_id):
         if pw.text != pw_confirm.text:
             return False
-        print(email.text, pw.text, pw_confirm.text, ems_id.text)
-        return True
+        if email.text == '' or ('@' not in email.text) or pw.text == '':
+            return False
+        try:
+            print(email.text, pw.text, pw_confirm.text, ems_id.text)
+            create_acct(email.text, pw.text)
+            return True
+        except:
+            return False
