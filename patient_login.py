@@ -12,6 +12,9 @@ class PatientLogin(Screen):
     def __init__(self, **kwargs):
         super(PatientLogin, self).__init__(**kwargs)
         Window.clearcolor = rgba(*Colors.BEIGE, 1)
+        
+    def on_pre_enter(self, *args):
+        self.manager.transition.direction = 'left'
 
     def get_info(self, patpass, patemail):
         print(patemail.text)

@@ -9,4 +9,8 @@ from colors import Colors
 
 kv = Builder.load_file('ems_signup.kv')
 class EMSSignup(Screen):
-    pass
+    def on_pre_enter(self, *args):
+        self.manager.transition.direction = 'up'
+    
+    def on_pre_leave(self, *args):
+        self.manager.transition.direction = 'down'
