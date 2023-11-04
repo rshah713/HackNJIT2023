@@ -80,11 +80,12 @@
             size_hint: (.3, .1)
             pos_hint: {'x': 0.55}
 
-            text: "New Account"
+            text: "New Patient Account"
             color: rgba(Colors.BLUE)
             background_normal: ''
             background_color: rgba(*Colors.BLUE, 0)
-#                 on_press: root.manager.current = 'patient_signup'
+            on_press: 
+                root.manager.current = 'patient signup'
 
         Widget:
             size_hint_y: 0.1

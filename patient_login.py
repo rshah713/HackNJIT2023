@@ -16,4 +16,5 @@ class PatientLogin(Screen):
     def get_info(self, patpass, patemail):
         print(patemail.text)
         print(patpass.text)
+        return True
         

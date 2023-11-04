@@ -7,13 +7,16 @@ from kivy.utils import rgba
 from colors import Colors
 
 
-kv = Builder.load_file('patient_login.kv')
+kv = Builder.load_file('patient_signup.kv')
 class PatientSignup(Screen):
-    def __init__(self, **kwargs):
-        super(PatientSignup, self).__init__(**kwargs)
-        Window.clearcolor = rgba(*Colors.BEIGE, 1)
+    pass
 
-    def get_info(self, patpass, patemail):
-        print(patemail.text)
-        print(patpass.text)
+    
+    # def __init__(self, **kwargs):
+    #     super(PatientSignup, self).__init__(**kwargs)
+    #     Window.clearcolor = rgba(*Colors.BEIGE, 1)
+
+    # def get_info(self, patpass, patemail):
+    #     print(patemail.text)
+    #     print(patpass.text)
         
