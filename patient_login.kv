@@ -93,11 +93,9 @@
         ############################## DONE BUTTON ##############################    
         Button:
             on_press: 
-                root.get_info(patpass, patemail)
+                root.manager.current = 'dashboard' if root.login(patemail, patpass) else 'patient login'
             size_hint: (.3, .2)
             pos_hint: {'center_x': 0.5}
-#                 on_release:
-#                     root.manager.current = 'dashboard' if root.login(email_textinput, pw_textinput) else 'login'
 
 
             color: rgba(Colors.BLUE)

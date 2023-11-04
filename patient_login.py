@@ -4,6 +4,7 @@ from kivy.uix.screenmanager import Screen
 from kivy.core.window import Window
 from kivy.utils import rgba
 
+from FirebaseRealtimeDB import login as fb_login
 from colors import Colors
 
 
@@ -16,8 +17,8 @@ class PatientLogin(Screen):
     def on_pre_enter(self, *args):
         self.manager.transition.direction = 'left'
 
-    def get_info(self, patpass, patemail):
+    def login(self, patemail, patpass):
         print(patemail.text)
         print(patpass.text)
-        return True
+        return fb_login(patemail.text, patpass.text)
         
