@@ -94,7 +94,7 @@
             size_hint: (.3, .2)
             pos_hint: {'center_x': 0.5}
             on_release:
-                root.manager.current = 'welcome' if root.login(email.text, passw.text) else 'ems login'
+                root.manager.current = 'ems dinput' if root.login(email.text, passw.text) else 'ems login'
 
 
             color: rgba(Colors.BLUE)
