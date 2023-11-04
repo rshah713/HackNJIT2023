@@ -1,7 +1,9 @@
+#: import rgba kivy.utils.rgba
+#: import Colors colors.Colors
 <Welcome>:
     name: 'welcome'
     GridLayout:
-        
+        background_color: rgba(Colors.BEIGE)
         cols: 1
 
         FloatLayout:
@@ -15,17 +17,17 @@
             cols: 2
             FloatLayout:
                 Button:
+                    background_color: rgba(Colors.BLUE)
                     text: 'I Am A Patient'
                     font_size: 45
                     pos_hint: {'center_x': 0.5, "top":0.6}
                     size_hint: (.6, .4) # button_width, button_height
-                    on_press:
-                        root.manager.current = 'patient login'
+                    on_press: root.manager.current = 'patient login'
             FloatLayout:
                 Button: 
+                    background_color: rgba(Colors.BLUE)
                     text: 'I Am EMS'
                     font_size: 45
                     pos_hint: {'center_x': 0.5, "top":0.6}
                     size_hint: (.6, .4) # button_width, button_height
-                    on_press:
-                        root.manager.current = 'ems login'
+                    on_press: root.manager.current = 'ems login'
