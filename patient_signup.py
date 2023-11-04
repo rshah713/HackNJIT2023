@@ -5,7 +5,7 @@ from kivy.core.window import Window
 from kivy.utils import rgba
 
 from colors import Colors
-
+from FirebaseRealtimeDB import create_acct
 
 kv = Builder.load_file('patient_signup.kv')
 class PatientSignup(Screen):
@@ -24,7 +24,11 @@ class PatientSignup(Screen):
             return False
         if "" in [patemail.text, patpass.text, patpassconfirm.text, patDriverId.text]:
             return False
-        if "@" not in patemail:
+        if "@" not in patemail.text:
             return False
-        
-        return True        
+        try:
+            print(patemail.text, patpass.text, patpassconfirm.text, patDriverId.text)
+            create_acct(patemail.text, patpass.text)
+            return True
+        except:
+            return False      
