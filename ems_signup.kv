@@ -134,8 +134,8 @@
             Button:
                 size_hint: (.4, .4)
                 pos_hint: {'center_x': 0.5, 'top': 1}
-#                 on_release:
-#                     root.manager.current = 'login' if root.valid_credentials(email_textinput, pw_textinput, pw_confirm_textinput) else 'signup'
+                on_release:
+                    root.manager.current = 'ems login' if root.valid_credentials(email, pw_textinput, pw_confirm_textinput, ems_id) else 'ems signup'
 
 
                 color: rgba(Colors.BLUE)
