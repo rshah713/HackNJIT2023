@@ -19,7 +19,7 @@
                 
     BoxLayout:
         orientation: 'vertical'
-        pos_hint: {'top': 7}
+        pos_hint: {'top': .7}
         size_hint_y: .7
 
 
@@ -110,3 +110,31 @@
                 Line:
                     width: 3
                     rectangle: self.x, self.y, self.width, self.height
+                        
+                        
+        ############################## ERROR LABEL ##############################
+        Label:
+            id: errorlbl
+            text: ""
+            color: rgba(255, 0, 0)
+            font_size: 18
+            size_hint_y: .2
+            pos_hint: {'center_y': 0.3}
+                
+        ############################## LOGO HERE ##############################        
+        Button:
+            size_hint_y: .2
+            background_normal: ''
+            background_color: rgba(237, 151, 76, 0)
+            background_down:''
+            
+      
+        Label:
+            size_hint_y: .2
+            text: "[ref=forgot]Forgot Password?[/ref]"
+            color: rgba(Colors.BLUE)
+            pos_hint: {'center_x': 0.5, "y": 1}
+            markup: True
+            on_ref_press:
+                import webbrowser
+                webbrowser.open("https://forms.gle/hqFUxiabb4gcEFU37")
