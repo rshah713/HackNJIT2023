@@ -9,7 +9,7 @@ class WindowManager(ScreenManager):
 
 class MedifyApp(App):
     def build(self):
-        return Label(text='Hello, Kivy!')
+        return 
 
 if __name__ == '__main__':
     MedifyApp().run()
