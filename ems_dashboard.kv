@@ -7,9 +7,13 @@
 
         Label:
             text: "Patient Info"
-            font_size: 50
+            font_size: min(self.width*0.23, self.height) * 0.45
             font_name: 'Roboto-Bold'
             color: rgba(Colors.BLUE)
+
+
+
+
 
 ####################### name+age ##################################
 
@@ -22,6 +26,7 @@
                 size_hint: (.7, .2)
                 pos_hint: {'x': 0.15}
                 text: "Name: "
+                font_size: min(self.width*0.3, self.height) * 0.6
                 color: rgba(Colors.BLUE)
                 foreground_color: rgba(Colors.BLUE)
 
@@ -30,11 +35,17 @@
                 size_hint: (.7, .2)
                 pos_hint: {'x': 0.15}
                 text: "Age: "
+                font_size: min(self.width*0.3, self.height) * 0.6
                 color: rgba(Colors.BLUE)
                 foreground_color: rgba(Colors.ACCENT_BLUE)
 
         Widget:
             size_hint_y: 0.02
+
+
+
+
+
 
 ####################### weight+height ##################################
         GridLayout:
@@ -45,6 +56,7 @@
                 id: patweight
                 pos_hint: {'x': 0.15}
                 text: "Weight: "
+                font_size: min(self.width*0.3, self.height) * 0.6
                 color: rgba(Colors.BLUE)
                 background_color: rgba(*Colors.BLUE, 0)
                 foreground_color: rgba(Colors.ACCENT_BLUE)
@@ -52,8 +64,8 @@
             Label:
                 id: patheight
                 pos_hint: {'x': 0.15}
-                
                 text: "Height: "
+                font_size: min(self.width*0.3, self.height) * 0.6
                 color: rgba(Colors.BLUE)
                 color: rgba(Colors.BLUE)
                 foreground_color: rgba(Colors.ACCENT_BLUE)
@@ -61,15 +73,26 @@
         Widget:
             size_hint_y: 0.02
 
+
+
+
+
+
+
+
+
+
+
 ####################### BT+ID ##################################
         GridLayout:
             cols: 2
             size_hint: (.7, .2)
-            
+
             Label:
                 id: pagBT
                 pos_hint: {'x': 0.15}
                 text: "Blood Type: "
+                font_size: min(self.width*0.3, self.height) * 0.6
                 color: rgba(Colors.BLUE)
                 foreground_color: rgba(Colors.ACCENT_BLUE)
 
@@ -77,38 +100,81 @@
                 id: patID
                 pos_hint: {'x': 0.15}
                 text: "DIID: "
+                font_size: min(self.width*0.3, self.height) * 0.6
                 color: rgba(Colors.BLUE)
                 foreground_color: rgba(Colors.ACCENT_BLUE)
 
         Widget:
             size_hint_y: 0.02
 
+
+
+
+
+
+
+
 ####################### Conditions ##################################
         Label:
             id: patMedCond
             pos_hint: {'x': 0.15}
             text: "Medical Conditions: "
+            font_size: min(self.width*0.3, self.height) * 0.1
             color: rgba(Colors.BLUE)
             foreground_color: rgba(Colors.ACCENT_BLUE)
 
         Widget:
             size_hint_y: 0.02
+
+
+
+
+
+
+
 
 ####################### Allergies ##################################
         Label:
             id: patAllergies
             pos_hint: {'x': 0.15}
             text: "Allergies: "
+            font_size: min(self.width*0.3, self.height) * 0.1
             color: rgba(Colors.BLUE)
             foreground_color: rgba(Colors.ACCENT_BLUE)
 
         Widget:
             size_hint_y: 0.02
 
+
+
+
+
+
+
+
 ####################### Medications ##################################
         Label:
             id: patMedication
             pos_hint: {'x': 0.15}
             text: "Medications: "
+            font_size: min(self.width*0.3, self.height) * 0.1
             color: rgba(Colors.BLUE)
             foreground_color: rgba(Colors.ACCENT_BLUE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
