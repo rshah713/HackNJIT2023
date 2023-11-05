@@ -7,7 +7,7 @@
 
         Label:
             text: "Patient Info"
-            font_size: 100
+            font_size: 50
             font_name: 'Roboto-Bold'
             color: rgba(Colors.BLUE)
 
@@ -19,6 +19,7 @@
 
             TextInput:
                 id: patname
+                size_hint: (.7, .2)
                 pos_hint: {'x': 0.15}
                 multiline: False
                 hint_text: "Name"
@@ -35,9 +36,11 @@
 
             TextInput:
                 id: patage
+                size_hint: (.7, .2)
                 pos_hint: {'x': 0.15}
                 multiline: False
                 hint_text: "Age"
+                input_filter: 'int'
                 text: ""
                 background_color: rgba(*Colors.BLUE, 0)
                 foreground_color: rgba(Colors.ACCENT_BLUE)
@@ -50,8 +53,9 @@
                         rectangle: self.x, self.y, self.width, self.height
 
         Widget:
-            size_hint_y: 0.1
+            size_hint_y: 0.02
 
+####################### weight+height ##################################
         GridLayout:
             cols: 2
             size_hint: (.7, .2)
@@ -61,6 +65,7 @@
                 pos_hint: {'x': 0.15}
                 multiline: False
                 hint_text: "Weight"
+                input_filter: 'int'
                 text: ""
                 background_color: rgba(*Colors.BLUE, 0)
                 foreground_color: rgba(Colors.ACCENT_BLUE)
@@ -77,6 +82,7 @@
                 pos_hint: {'x': 0.15}
                 multiline: False
                 hint_text: "Height"
+                input_filter: 'int'
                 text: ""
                 background_color: rgba(*Colors.BLUE, 0)
                 foreground_color: rgba(Colors.ACCENT_BLUE)
@@ -89,8 +95,9 @@
                         rectangle: self.x, self.y, self.width, self.height
 
         Widget:
-            size_hint_y: 0.1
+            size_hint_y: 0.02
 
+####################### BT+ID ##################################
         GridLayout:
             cols: 2
             size_hint: (.7, .2)
@@ -128,8 +135,9 @@
                         rectangle: self.x, self.y, self.width, self.height
 
         Widget:
-            size_hint_y: 0.1
+            size_hint_y: 0.02
 
+####################### Conditions ##################################
         TextInput:
             id: patMedCond
             pos_hint: {'x': 0.15}
@@ -147,8 +155,9 @@
                     rectangle: self.x, self.y, self.width, self.height
 
         Widget:
-            size_hint_y: 0.1
+            size_hint_y: 0.02
 
+####################### Allergies ##################################
         TextInput:
             id: patAllergies
             pos_hint: {'x': 0.15}
@@ -166,8 +175,9 @@
                     rectangle: self.x, self.y, self.width, self.height
 
         Widget:
-            size_hint_y: 0.1
+            size_hint_y: 0.02
 
+####################### Medications ##################################
         TextInput:
             id: patMedication
             pos_hint: {'x': 0.15}
@@ -183,3 +193,23 @@
                 Line:
                     width: 2
                     rectangle: self.x, self.y, self.width, self.height
+
+####################### Submit/Update ##################################
+        FloatLayout:
+            Button:
+                id: submit
+                
+                pos_hint: {'center_x': 0.5, "top": 0.8 }
+                size_hint: (.6, .4)
+                text: "Submit"
+                color: rgba(Colors.BLUE)
+                background_normal: ''
+                background_color: rgba(Colors.LIGHT_BLUE)
+    #                 background_down: 'assets/orange_button_down.png'
+
+                canvas.before:
+                    Color:
+                        rgb: rgba(Colors.BLUE)
+                    Line:
+                        width: 3
+                        rectangle: self.x, self.y, self.width, self.height
