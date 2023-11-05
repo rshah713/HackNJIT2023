@@ -94,7 +94,7 @@
         ############################## DONE BUTTON ##############################    
         Button:
             on_press: 
-                root.manager.current = 'dashboard' if root.login(patemail, patpass) else 'patient login'
+                root.manager.current = 'dashboard' if root.login(patemail, patpass, errorlbl) else 'patient login'
             size_hint: (.3, .2)
             pos_hint: {'center_x': 0.5}
 
@@ -121,7 +121,7 @@
             id: errorlbl
             text: ""
             color: rgba(255, 0, 0)
-            font_size: 18
+            font_size: min(self.width*0.2, self.height) * 0.2
             size_hint_y: .2
             pos_hint: {'center_y': 0.3}
                 

@@ -17,7 +17,10 @@ class PatientLogin(Screen):
     def on_pre_enter(self, *args):
         self.manager.transition.direction = 'left'
 
-    def login(self, patemail, patpass):
+    def login(self, patemail, patpass, errorlbl):
+        if not fb_login(patemail.text, patpass.text):
+            errorlbl.text = 'Email or password could not be verified.'
+            return False
         print(patemail.text)
         print(patpass.text)
         return fb_login(patemail.text, patpass.text)
