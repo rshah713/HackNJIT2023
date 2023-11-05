@@ -15,18 +15,18 @@
             FloatLayout:
                 Button:
                     color: rgba(Colors.LIGHT_BLUE)
-                    background_color: rgba(Colors.BLUE)
+                    background_color: rgba(Colors.ACCENT_BLUE)
                     text: 'I Am A Patient'
-                    font_size: 20
+                    font_size: 40
                     pos_hint: {'center_x': 0.5, "top":0.6}
                     size_hint: (.6, .4) # button_width, button_height
                     on_press: root.manager.current = 'patient login'
             FloatLayout:
                 Button: 
                     color: rgba(Colors.LIGHT_BLUE)
-                    background_color: rgba(Colors.BLUE)
+                    background_color: rgba(Colors.ACCENT_BLUE)
                     text: 'I Am EMS'
-                    font_size: 20
+                    font_size: 40
                     pos_hint: {'center_x': 0.5, "top":0.6}
                     size_hint: (.6, .4) # button_width, button_height
                     on_press: root.manager.current = 'ems login'
