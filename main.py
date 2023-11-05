@@ -8,7 +8,7 @@ from ems_signup import EMSSignup
 from ems_dinput import EMSDinput
 from patient_login import PatientLogin
 from patient_signup import PatientSignup
-
+from dashboard import Dashboard
 class WindowManager(ScreenManager):
     pass
 

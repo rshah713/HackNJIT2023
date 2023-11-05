@@ -1,0 +1,185 @@
+#: import rgba kivy.utils.rgba
+#: import Colors colors.Colors
+<Dashboard>:
+    name: 'dashboard'
+    GridLayout:
+        cols: 1
+
+        Label:
+            text: "Patient Info"
+            font_size: 100
+            font_name: 'Roboto-Bold'
+            color: rgba(Colors.BLUE)
+
+####################### name+age ##################################
+
+        GridLayout:
+            cols: 2
+            size_hint: (.7, .2)
+
+            TextInput:
+                id: patname
+                pos_hint: {'x': 0.15}
+                multiline: False
+                hint_text: "Name"
+                text: ""
+                background_color: rgba(*Colors.BLUE, 0)
+                foreground_color: rgba(Colors.ACCENT_BLUE)
+
+                canvas.after:
+                    Color:
+                        rgb: rgba(Colors.BLUE)
+                    Line:
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
+
+            TextInput:
+                id: patage
+                pos_hint: {'x': 0.15}
+                multiline: False
+                hint_text: "Age"
+                text: ""
+                background_color: rgba(*Colors.BLUE, 0)
+                foreground_color: rgba(Colors.ACCENT_BLUE)
+
+                canvas.after:
+                    Color:
+                        rgb: rgba(Colors.BLUE)
+                    Line:
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
+
+        Widget:
+            size_hint_y: 0.1
+
+        GridLayout:
+            cols: 2
+            size_hint: (.7, .2)
+
+            TextInput:
+                id: patweight
+                pos_hint: {'x': 0.15}
+                multiline: False
+                hint_text: "Weight"
+                text: ""
+                background_color: rgba(*Colors.BLUE, 0)
+                foreground_color: rgba(Colors.ACCENT_BLUE)
+
+                canvas.after:
+                    Color:
+                        rgb: rgba(Colors.BLUE)
+                    Line:
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
+
+            TextInput:
+                id: patheight
+                pos_hint: {'x': 0.15}
+                multiline: False
+                hint_text: "Height"
+                text: ""
+                background_color: rgba(*Colors.BLUE, 0)
+                foreground_color: rgba(Colors.ACCENT_BLUE)
+
+                canvas.after:
+                    Color:
+                        rgb: rgba(Colors.BLUE)
+                    Line:
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
+
+        Widget:
+            size_hint_y: 0.1
+
+        GridLayout:
+            cols: 2
+            size_hint: (.7, .2)
+            
+            TextInput:
+                id: pagBT
+                pos_hint: {'x': 0.15}
+                multiline: False
+                hint_text: "Blood Type"
+                text: ""
+                background_color: rgba(*Colors.BLUE, 0)
+                foreground_color: rgba(Colors.ACCENT_BLUE)
+
+                canvas.after:
+                    Color:
+                        rgb: rgba(Colors.BLUE)
+                    Line:
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
+
+            TextInput:
+                id: patID
+                pos_hint: {'x': 0.15}
+                multiline: False
+                hint_text: "Id Number"
+                text: ""
+                background_color: rgba(*Colors.BLUE, 0)
+                foreground_color: rgba(Colors.ACCENT_BLUE)
+
+                canvas.after:
+                    Color:
+                        rgb: rgba(Colors.BLUE)
+                    Line:
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
+
+        Widget:
+            size_hint_y: 0.1
+
+        TextInput:
+            id: patMedCond
+            pos_hint: {'x': 0.15}
+            multiline: False
+            hint_text: "Medical Conditions"
+            text: ""
+            background_color: rgba(*Colors.BLUE, 0)
+            foreground_color: rgba(Colors.ACCENT_BLUE)
+
+            canvas.after:
+                Color:
+                    rgb: rgba(Colors.BLUE)
+                Line:
+                    width: 2
+                    rectangle: self.x, self.y, self.width, self.height
+
+        Widget:
+            size_hint_y: 0.1
+
+        TextInput:
+            id: patAllergies
+            pos_hint: {'x': 0.15}
+            multiline: False
+            hint_text: "Allergies"
+            text: ""
+            background_color: rgba(*Colors.BLUE, 0)
+            foreground_color: rgba(Colors.ACCENT_BLUE)
+
+            canvas.after:
+                Color:
+                    rgb: rgba(Colors.BLUE)
+                Line:
+                    width: 2
+                    rectangle: self.x, self.y, self.width, self.height
+
+        Widget:
+            size_hint_y: 0.1
+
+        TextInput:
+            id: patMedication
+            pos_hint: {'x': 0.15}
+            multiline: False
+            hint_text: "Medications"
+            text: ""
+            background_color: rgba(*Colors.BLUE, 0)
+            foreground_color: rgba(Colors.ACCENT_BLUE)
+
+            canvas.after:
+                Color:
+                    rgb: rgba(Colors.BLUE)
+                Line:
+                    width: 2
+                    rectangle: self.x, self.y, self.width, self.height
