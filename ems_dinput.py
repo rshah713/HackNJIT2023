@@ -23,6 +23,3 @@ class EMSDinput(Screen):
             popup.open()
             return False
         return True
-    
-    def get_patient_info(self, dlid):
-        print(dlid.text)
