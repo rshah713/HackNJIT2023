@@ -121,7 +121,7 @@
             size_hint: (.3, .2)
             pos_hint: {'center_x': 0.5}
             on_release:
-                root.manager.current = 'ems dinput' if root.login(email.text, passw.text, ems_id.text, errorlbl) else 'ems login'
+                root.manager.current = 'ems dinput' if root.login(email.text, passw.text, ems_id, errorlbl) else 'ems login'
 
 
             color: rgba(Colors.BLUE)
@@ -160,7 +160,7 @@
       
         Label:
             size_hint_y: .2
-            text: "[ref=forgot]Forgot Password?[/ref]"
+            text: ""
             color: rgba(Colors.BLUE)
             pos_hint: {'center_x': 0.5, "y": 1}
             markup: True

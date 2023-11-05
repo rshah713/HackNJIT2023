@@ -16,6 +16,8 @@ class EMSLogin(Screen):
     
     def login(self, email, password, ems_id, errorlbl):
         print(email, password)
-        if len(ems_id) < 12:
+        if len(ems_id.text) < 12:
+            errorlbl.text = 'National EMS ID could not be verified'
+            ems_id.text = ''
             return False
         return fb_login(email, password)
