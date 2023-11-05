@@ -10,7 +10,7 @@
         
         Label:
             text: "Access Info"
-            font_size: 100
+            font_size: min(self.width*0.3, self.height) * 0.5
             font_name: 'Roboto-Bold'
             color: rgba(Colors.BLUE)
                 
@@ -19,12 +19,13 @@
                 
         Label:
             text: "Enter Patient Drivers License #"
-            font_size: 45
+            font_size: min(self.width*0.2, self.height) * 0.35
             font_name: 'Roboto-Bold'
             color: rgba(Colors.ACCENT_BLUE)
                 
         TextInput:
             id: license
+            font_size: min(self.width*0.3, self.height) * 0.4
             size_hint: (.7, .5)
             canvas.after:
                 Color:
@@ -37,8 +38,8 @@
             text: "Check"
             color: rgba(Colors.BLUE)
             background_normal: '' #https://stackoverflow.com/a/49100826/12514570
-            text: 'Login'
-            font_size: 45
+            text: 'Enter'
+            font_size: min(self.width*0.3, self.height) * 0.5
             on_press:
                 root.manager.current = 'ems dashboard' if root.check_dl_num(license.text) else 'ems dinput'
 
