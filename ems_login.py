@@ -14,6 +14,8 @@ class EMSLogin(Screen):
         super(EMSLogin, self).__init__(**kwargs)
         Window.clearcolor = rgba(*Colors.BEIGE, 1)
     
-    def login(self, email, password):
+    def login(self, email, password, ems_id, errorlbl):
         print(email, password)
+        if len(ems_id) < 12:
+            return False
         return fb_login(email, password)

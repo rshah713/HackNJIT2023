@@ -74,6 +74,33 @@
                 Line:
                     width: 2
                     rectangle: self.x, self.y, self.width, self.height
+                        
+        Widget:
+            size_hint_y: 0.1
+                        
+        ############################## PASSWORD ##############################
+
+        Label:
+            text: "EMS ID:"
+            color: rgba(Colors.BLUE)
+            font_size: 20
+            size_hint: (.1, .05)
+            pos_hint: {'x': 0.15}
+        TextInput:
+            id: ems_id
+            size_hint: (.7, .1)
+            pos_hint: {'x': 0.15}
+            multiline: False
+            text: ""
+            background_color: rgba(*Colors.BLUE, 0)
+            foreground_color: rgba(Colors.ACCENT_BLUE)
+
+            canvas.after:
+                Color:
+                    rgb: rgba(Colors.BLUE)
+                Line:
+                    width: 2
+                    rectangle: self.x, self.y, self.width, self.height
 
         ############################## NEW ACCOUNT BUTTON ##############################        
         Button:
@@ -94,7 +121,7 @@
             size_hint: (.3, .2)
             pos_hint: {'center_x': 0.5}
             on_release:
-                root.manager.current = 'ems dinput' if root.login(email.text, passw.text) else 'ems login'
+                root.manager.current = 'ems dinput' if root.login(email.text, passw.text, ems_id.text, errorlbl) else 'ems login'
 
 
             color: rgba(Colors.BLUE)
