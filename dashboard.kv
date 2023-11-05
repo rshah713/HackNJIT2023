@@ -7,7 +7,7 @@
 
         Label:
             text: "Patient Info"
-            font_size: 50
+            font_size: min(self.width*0.3, self.height) * 0.4
             font_name: 'Roboto-Bold'
             color: rgba(Colors.BLUE)
 
@@ -22,6 +22,7 @@
                 size_hint: (.7, .2)
                 pos_hint: {'x': 0.15}
                 multiline: False
+                font_size: min(self.width*0.3, self.height) * 0.6
                 hint_text: "Name"
                 text: ""
                 background_color: rgba(*Colors.BLUE, 0)
@@ -39,6 +40,7 @@
                 size_hint: (.7, .2)
                 pos_hint: {'x': 0.15}
                 multiline: False
+                font_size: min(self.width*0.3, self.height) * 0.6
                 hint_text: "Age"
                 input_filter: 'int'
                 text: ""
@@ -64,6 +66,7 @@
                 id: patweight
                 pos_hint: {'x': 0.15}
                 multiline: False
+                font_size: min(self.width*0.3, self.height) * 0.6
                 hint_text: "Weight"
                 input_filter: 'int'
                 text: ""
@@ -81,6 +84,7 @@
                 id: patheight
                 pos_hint: {'x': 0.15}
                 multiline: False
+                font_size: min(self.width*0.3, self.height) * 0.6
                 hint_text: "Height"
                 text: ""
                 background_color: rgba(*Colors.BLUE, 0)
@@ -105,6 +109,7 @@
                 id: pagBT
                 pos_hint: {'x': 0.15}
                 multiline: False
+                font_size: min(self.width*0.3, self.height) * 0.6
                 hint_text: "Blood Type"
                 text: ""
                 background_color: rgba(*Colors.BLUE, 0)
@@ -121,6 +126,7 @@
                 id: patID
                 pos_hint: {'x': 0.15}
                 multiline: False
+                font_size: min(self.width*0.3, self.height) * 0.6
                 hint_text: "Id Number"
                 text: ""
                 background_color: rgba(*Colors.BLUE, 0)
@@ -141,6 +147,7 @@
             id: patMedCond
             pos_hint: {'x': 0.15}
             multiline: False
+            font_size: min(self.width*0.3, self.height) * 0.15
             hint_text: "Medical Conditions"
             text: ""
             background_color: rgba(*Colors.BLUE, 0)
@@ -161,6 +168,7 @@
             id: patAllergies
             pos_hint: {'x': 0.15}
             multiline: False
+            font_size: min(self.width*0.3, self.height) * 0.15
             hint_text: "Allergies"
             text: ""
             background_color: rgba(*Colors.BLUE, 0)
@@ -181,6 +189,7 @@
             id: patMedication
             pos_hint: {'x': 0.15}
             multiline: False
+            font_size: min(self.width*0.3, self.height) * 0.15
             hint_text: "Medications"
             text: ""
             background_color: rgba(*Colors.BLUE, 0)
@@ -201,6 +210,7 @@
                 pos_hint: {'center_x': 0.5, "top": 0.8 }
                 size_hint: (.6, .4)
                 text: "Submit"
+                font_size: min(self.width*0.3, self.height) * 0.6
                 color: rgba(Colors.BLUE)
                 background_normal: ''
                 background_color: rgba(Colors.LIGHT_BLUE)
