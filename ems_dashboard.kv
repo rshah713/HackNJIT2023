@@ -1,5 +1,114 @@
+#: import rgba kivy.utils.rgba
+#: import Colors colors.Colors
 <EMSDashboard>:
     name: 'ems dashboard'
-    
-    Button:
-        text: 'hi'
+    GridLayout:
+        cols: 1
+
+        Label:
+            text: "Patient Info"
+            font_size: 50
+            font_name: 'Roboto-Bold'
+            color: rgba(Colors.BLUE)
+
+####################### name+age ##################################
+
+        GridLayout:
+            cols: 2
+            size_hint: (.7, .2)
+
+            Label:
+                id: patname
+                size_hint: (.7, .2)
+                pos_hint: {'x': 0.15}
+                text: "Name: "
+                color: rgba(Colors.BLUE)
+                foreground_color: rgba(Colors.BLUE)
+
+            Label:
+                id: patage
+                size_hint: (.7, .2)
+                pos_hint: {'x': 0.15}
+                text: "Age: "
+                color: rgba(Colors.BLUE)
+                foreground_color: rgba(Colors.ACCENT_BLUE)
+
+        Widget:
+            size_hint_y: 0.02
+
+####################### weight+height ##################################
+        GridLayout:
+            cols: 2
+            size_hint: (.7, .2)
+
+            Label:
+                id: patweight
+                pos_hint: {'x': 0.15}
+                text: "Weight: "
+                color: rgba(Colors.BLUE)
+                background_color: rgba(*Colors.BLUE, 0)
+                foreground_color: rgba(Colors.ACCENT_BLUE)
+
+            Label:
+                id: patheight
+                pos_hint: {'x': 0.15}
+                
+                text: "Height: "
+                color: rgba(Colors.BLUE)
+                color: rgba(Colors.BLUE)
+                foreground_color: rgba(Colors.ACCENT_BLUE)
+
+        Widget:
+            size_hint_y: 0.02
+
+####################### BT+ID ##################################
+        GridLayout:
+            cols: 2
+            size_hint: (.7, .2)
+            
+            Label:
+                id: pagBT
+                pos_hint: {'x': 0.15}
+                text: "Blood Type: "
+                color: rgba(Colors.BLUE)
+                foreground_color: rgba(Colors.ACCENT_BLUE)
+
+            Label:
+                id: patID
+                pos_hint: {'x': 0.15}
+                text: "DIID: "
+                color: rgba(Colors.BLUE)
+                foreground_color: rgba(Colors.ACCENT_BLUE)
+
+        Widget:
+            size_hint_y: 0.02
+
+####################### Conditions ##################################
+        Label:
+            id: patMedCond
+            pos_hint: {'x': 0.15}
+            text: "Medical Conditions: "
+            color: rgba(Colors.BLUE)
+            foreground_color: rgba(Colors.ACCENT_BLUE)
+
+        Widget:
+            size_hint_y: 0.02
+
+####################### Allergies ##################################
+        Label:
+            id: patAllergies
+            pos_hint: {'x': 0.15}
+            text: "Allergies: "
+            color: rgba(Colors.BLUE)
+            foreground_color: rgba(Colors.ACCENT_BLUE)
+
+        Widget:
+            size_hint_y: 0.02
+
+####################### Medications ##################################
+        Label:
+            id: patMedication
+            pos_hint: {'x': 0.15}
+            text: "Medications: "
+            color: rgba(Colors.BLUE)
+            foreground_color: rgba(Colors.ACCENT_BLUE)
