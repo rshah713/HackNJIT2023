@@ -1,32 +1,29 @@
-#: import rgba kivy.utils.rgba
-#: import Colors colors.Colors
 <Welcome>:
     name: 'welcome'
     GridLayout:
         cols: 1
 
         Image:
-            size_hint: (1,1)
+            size_hint: (1, 1)
             source: 'medifyLogo.png'
-            
-            
-        GridLayout: 
+
+        GridLayout:
             cols: 2
             FloatLayout:
                 Button:
                     color: rgba(Colors.LIGHT_BLUE)
                     background_color: rgba(Colors.ACCENT_BLUE)
                     text: 'Patient Login'
-                    font_size: 40
-                    pos_hint: {'center_x': 0.5, "top":0.6}
-                    size_hint: (.6, .4) # button_width, button_height
+                    pos_hint: {'center_x': 0.5, "top": 0.6}
+                    size_hint: (.6, .4)
+                    font_size: min(self.width, self.height) * 0.15  # Set font size based on minimum of width and height
                     on_press: root.manager.current = 'patient login'
             FloatLayout:
-                Button: 
+                Button:
                     color: rgba(Colors.LIGHT_BLUE)
                     background_color: rgba(Colors.ACCENT_BLUE)
                     text: 'EMS Login'
-                    font_size: 40
-                    pos_hint: {'center_x': 0.5, "top":0.6}
-                    size_hint: (.6, .4) # button_width, button_height
+                    pos_hint: {'center_x': 0.5, "top": 0.6}
+                    size_hint: (.6, .4)
+                    font_size: min(self.width, self.height) * 0.2  # Set font size based on minimum of width and height
                     on_press: root.manager.current = 'ems login'
