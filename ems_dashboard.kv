@@ -2,6 +2,15 @@
 #: import Colors colors.Colors
 <EMSDashboard>:
     name: 'ems dashboard'
+    patname: patname
+    patage: patage
+    patheight: patheight
+    patweight: patweight
+    patBT: patBT
+    patID: patID
+    patMedCond: patMedCond
+    patAllergies: patAllergies
+    patMedication: patMedication
     GridLayout:
         cols: 1
 
@@ -89,7 +98,7 @@
             size_hint: (.7, .2)
 
             Label:
-                id: pagBT
+                id: patBT
                 pos_hint: {'x': 0.15}
                 text: "Blood Type: "
                 font_size: min(self.width*0.3, self.height) * 0.6

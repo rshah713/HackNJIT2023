@@ -22,4 +22,7 @@ class EMSDinput(Screen):
             b.bind(on_press=popup.dismiss)
             popup.open()
             return False
+        App.get_running_app().save_dlid(license)
+        print(App.get_running_app().get_dlid())
         return True
+    
