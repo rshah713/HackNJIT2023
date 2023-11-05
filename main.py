@@ -15,7 +15,11 @@ class WindowManager(ScreenManager):
 
 class MedifyApp(App):
     def build(self):
-        return 
+        return
+    def save_dlid(self, dlid):
+        self.dlid = dlid
+    def get_dlid(self):
+        return self.dlid
 
 if __name__ == '__main__':
     MedifyApp().run()
