@@ -26,6 +26,12 @@
         TextInput:
             id: license
             size_hint: (.7, .5)
+            canvas.after:
+                Color:
+                    rgb: rgba(Colors.BLUE)
+                Line:
+                    width: 2
+                    rectangle: self.x, self.y, self.width, self.height
                 
         Button:
             text: "Check"
