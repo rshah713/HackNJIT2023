@@ -13,7 +13,7 @@
         
         Label:
             text: "EMS Sign Up"
-            font_size: 100
+            font_size: min(self.width*0.3, self.height) * 0.4
             font_name: 'Roboto-Bold'
             color: rgba(Colors.BLUE)
                 
@@ -26,11 +26,12 @@
         Label:
             text: "Email:"
             color: rgba(Colors.BLUE)
-            font_size: 20
+            font_size: min(self.width*0.4, self.height) * 0.8
             size_hint: (.1, .05)
             pos_hint: {'x': 0.15}
         TextInput:
             id: email
+            font_size: min(self.width*0.4, self.height) * 0.8
             size_hint: (.7, .05)
             pos_hint: {'x': 0.15}
             multiline: False
@@ -46,21 +47,38 @@
                     rectangle: self.x, self.y, self.width, self.height
                         
         
-                
+
+
+
+
+
+
+
+
+
+
+
         ############################## PASSWORD ##############################
                 
         Label:
             text: "Password:"
-            color: rgba(Colors.ACCENT_BLUE)
-            font_size: 20
+            color: rgba(Colors.BLUE)
+            font_size: min(self.width*0.4, self.height) * 0.8
             size_hint: (.1, .05)
             pos_hint: {'x': 0.15}
         TextInput:
             id: pw_textinput
+            font_size: min(self.width*0.4, self.height) * 0.8
             size_hint: (.7, .05)
             pos_hint: {'x': 0.15}
             password: True
             multiline: False
+
+
+
+
+
+
             text: ""
             background_color: rgba(*Colors.BLUE, 0)
             foreground_color: rgba(Colors.ACCENT_BLUE)
@@ -78,13 +96,19 @@
         Label:
             text: "Confirm Password:"
             color: rgba(Colors.BLUE)
-            font_size: 20
+            font_size: min(self.width*0.4, self.height) * 0.8
             size_hint: (.1, .05)
             pos_hint: {'x': 0.2}
         TextInput:
             id: pw_confirm_textinput
             size_hint: (.7, .05)
             pos_hint: {'x': 0.15}
+            font_size: min(self.width*0.4, self.height) * 0.8
+
+
+
+
+
             password: True
             multiline: False
             text: ""
@@ -97,19 +121,28 @@
                 Line:
                     width: 2
                     rectangle: self.x, self.y, self.width, self.height
-                        
+
+
+
+
+
+
+
+
+
         ############################## EMS ID ##############################
                 
         Label:
             text: "National EMS ID:"
             color: rgba(Colors.BLUE)
-            font_size: 20
+            font_size: min(self.width*0.4, self.height) * 0.8
             size_hint: (.1, .05)
             pos_hint: {'x': 0.2}
         TextInput:
             id: ems_id
             size_hint: (.7, .05)
             pos_hint: {'x': 0.15}
+            font_size: min(self.width*0.4, self.height) * 0.8
             password: True
             multiline: False
             text: ""
@@ -141,7 +174,7 @@
                 color: rgba(Colors.BLUE)
                 background_normal: '' #https://stackoverflow.com/a/49100826/12514570
                 text: 'Signup'
-                font_size: 45
+                font_size: min(self.width*0.4, self.height) * 0.5
 
                 background_color: rgba(Colors.LIGHT_BLUE)
 #                 background_down: 'assets/orange_button_down.png'
@@ -168,6 +201,7 @@
             text: 'Already have an account? Login'
             color: rgba(Colors.BLUE)
             background_normal: ''
+            font_size: min(self.width*0.2, self.height) * 0.18
             background_color: rgba(*Colors.BLUE, 0)
             on_press: root.manager.current = 'ems login'
 
