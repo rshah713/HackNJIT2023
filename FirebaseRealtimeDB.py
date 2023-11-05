@@ -52,11 +52,14 @@ def verify_emt(ems_id):
 
 def update_patient_info(info):
     patients = database.child("patients").get().val()
+
     if info["dlid"] in patients:
         for key in info:
-            database.child("patients").child(info["dlid"]).update({key: info[key]})
+            patients[info["dlid"]][key] = info[key]
+        database.child("patients").set(patients)
     else:
-        database.child("patients").set({info["dlid"] : info})
+        patients[info["dlid"]] = info
+        database.child("patients").set(patients)
 
 
 def get_patient_info(dlid):
@@ -67,3 +70,15 @@ def get_patient_info(dlid):
     except:
         print("User not found!!!")
     return patient_info
+
+'''
+def update_patient_info(info):
+    patients = database.child("patients").get().val()
+
+    if info["dlid"] in patients:
+        for key in info:
+            database.child("patients").child(info["dlid"]).update({key: info[key]})
+    else:
+        database.child("patients").set({info["dlid"] : info})
+
+'''
