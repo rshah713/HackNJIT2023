@@ -13,7 +13,7 @@
         
         Label:
             text: "Patient Login"
-            font_size: 100
+            font_size: min(self.width*0.3, self.height) * 0.4
             font_name: 'Roboto-Bold'
             color: rgba(Colors.BLUE)
                 
@@ -27,7 +27,7 @@
         Label:
             text: "Email:"
             color: rgba(Colors.BLUE)
-            font_size: 20
+            font_size: min(self.width*0.4, self.height) * 0.8
             size_hint: (.1, .05)
             pos_hint: {'x': 0.15}
         TextInput:
@@ -55,7 +55,7 @@
         Label:
             text: "Password:"
             color: rgba(Colors.BLUE)
-            font_size: 20
+            font_size: min(self.width*0.4, self.height) * 0.8
             size_hint: (.1, .05)
             pos_hint: {'x': 0.15}
         TextInput:
@@ -81,6 +81,7 @@
             pos_hint: {'x': 0.55}
 
             text: "New Patient Account"
+            font_size: min(self.width*0.23, self.height) * 0.5
             color: rgba(Colors.BLUE)
             background_normal: ''
             background_color: rgba(*Colors.BLUE, 0)
@@ -101,7 +102,7 @@
             color: rgba(Colors.BLUE)
             background_normal: '' #https://stackoverflow.com/a/49100826/12514570
             text: 'Login'
-            font_size: 45
+            font_size: min(self.width*0.3, self.height) * 0.5
 
             background_color: rgba(Colors.LIGHT_BLUE)
 #                 background_down: 'assets/orange_button_down.png'
