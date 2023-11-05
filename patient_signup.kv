@@ -13,7 +13,7 @@
         
         Label:
             text: "Patient Sign Up"
-            font_size: 100
+            font_size: min(self.width*0.3, self.height) * 0.4
             font_name: 'Roboto-Bold'
             color: rgba(Colors.BLUE)
                 
@@ -26,7 +26,7 @@
         Label:
             text: "Email:"
             color: rgba(Colors.BLUE)
-            font_size: 20
+            font_size: min(self.width, self.height) * 0.5
             size_hint: (.1, .05)
             pos_hint: {'x': 0.15}
         TextInput:
@@ -51,8 +51,8 @@
                 
         Label:
             text: "Password:"
-            color: rgba(Colors.ACCENT_BLUE)
-            font_size: 20
+            color: rgba(Colors.BLUE)
+            font_size: min(self.width, self.height) * 0.5
             size_hint: (.1, .05)
             pos_hint: {'x': 0.15}
         TextInput:
@@ -78,7 +78,7 @@
         Label:
             text: "Confirm Password:"
             color: rgba(Colors.BLUE)
-            font_size: 20
+            font_size: min(self.width, self.height) * 0.5
             size_hint: (.1, .05)
             pos_hint: {'x': 0.2}
         TextInput:
@@ -103,7 +103,7 @@
         Label:
             text: "Driver License ID:"
             color: rgba(Colors.BLUE)
-            font_size: 20
+            font_size: min(self.width, self.height) * 0.5
             size_hint: (.1, .05)
             pos_hint: {'x': 0.2}
         TextInput:
@@ -141,7 +141,7 @@
                 color: rgba(Colors.BLUE)
                 background_normal: '' #https://stackoverflow.com/a/49100826/12514570
                 text: 'Signup'
-                font_size: 45
+                font_size: min(self.width*0.3, self.height) * 0.5
 
                 background_color: rgba(Colors.LIGHT_BLUE)
 #                 background_down: 'assets/orange_button_down.png'
@@ -166,6 +166,7 @@
                         
         Button:
             text: 'Already have an account? Login'
+            font_size: min(self.width*0.25, self.height) * 0.25
             color: rgba(Colors.BLUE)
             background_normal: ''
             background_color: rgba(*Colors.BLUE, 0)
