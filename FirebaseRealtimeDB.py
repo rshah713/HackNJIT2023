@@ -60,5 +60,10 @@ def update_patient_info(info):
 
 
 def get_patient_info(dlid):
-    patient_info = database.child("patients").child(dlid).get().val()
+    patient_info = None
+    
+    try:
+        patient_info = database.child("patients").child(dlid).get().val()
+    except:
+        print("User not found!!!")
     return patient_info
