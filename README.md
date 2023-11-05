@@ -2,6 +2,9 @@
 
 > Made by [@rshah713](https://github.com/rshah713), [bdorf04](https://github.com/bdorf04), [@BurhanNaveed0](https://github.com/BurhanNaveed0), and [@jonastirona](https://github.com/jonastirona)
 -------
+<img src="./assets/main.png" alt="login screen" width="200"/> <img src="./assets/emslogin.png" alt="ems screen" width="200"/> <img src="./assets/patinfo.png" alt="ems screen" width="200"/>
+
+-------
 A cross-platform mobile application to address the Patient Safety Technology Challenge. Medify features a dual-interface app for both EMT/EMS First Responders along with regular patients. Patients are asked to enter their medical information into the encrypted application. When arriving upon the scene, EMS can verify their status using the [National EMS Registry](https://www.nremt.org/verify-credentials) and access necessary medical information to make more accurate and timely decisions, ultimately saving lives. 
 
 EMS arriving upon scene can use the Drivers ID found on the person to locate all medical information through the EMS facet of the app, once creating an account with the app and proving their EMS status. 
