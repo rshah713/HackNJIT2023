@@ -6,6 +6,7 @@ from welcome_window import Welcome
 from ems_login import EMSLogin
 from ems_signup import EMSSignup
 from ems_dinput import EMSDinput
+from ems_dashboard import EMSDashboard
 from patient_login import PatientLogin
 from patient_signup import PatientSignup
 from dashboard import Dashboard
