@@ -4,6 +4,8 @@
 -------
 <img src="./assets/main.png" alt="login screen" width="200"/> <img src="./assets/emslogin.png" alt="ems screen" width="200"/> <img src="./assets/patinfo.png" alt="ems screen" width="200"/>
 
+**Won Honorable Mention (3rd Place) @HackNJIT 2023**
+
 -------
 A cross-platform mobile application to address the Patient Safety Technology Challenge. Medify features a dual-interface app for both EMT/EMS First Responders along with regular patients. Patients are asked to enter their medical information into the encrypted application. When arriving upon the scene, EMS can verify their status using the [National EMS Registry](https://www.nremt.org/verify-credentials) and access necessary medical information to make more accurate and timely decisions, ultimately saving lives. 
 
